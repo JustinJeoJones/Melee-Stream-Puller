@@ -2,7 +2,9 @@
 <h2>This app makes running streams easier by pulling down the matches automatically. You can hook it up with obs to allow the stream to update as you select new matches.</h2>
 <h2>How to download: </h2>
 <ul>
-  <li>First click this link to go to the file</li>
+  <li>First click the "CLICK HERE TO DOWNLOAD" rar file.</li>
+  <li>Once clicked, there should be a download button</li>
+  <li>Once downloaded use winrar/7zip/some alternative to export it.</li>
 </ul>
 <h2>How to run</h2>
 <ul>
