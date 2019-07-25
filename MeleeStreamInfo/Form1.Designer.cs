@@ -45,6 +45,10 @@
             this.button1 = new System.Windows.Forms.Button();
             this.timerUpdate = new System.Windows.Forms.Timer(this.components);
             this.label6 = new System.Windows.Forms.Label();
+            this.textBoxScore1 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBoxScore2 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // textBoxURL
@@ -125,7 +129,7 @@
             // 
             // textBoxName
             // 
-            this.textBoxName.Location = new System.Drawing.Point(364, 133);
+            this.textBoxName.Location = new System.Drawing.Point(361, 181);
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(100, 20);
             this.textBoxName.TabIndex = 9;
@@ -133,7 +137,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(364, 117);
+            this.label4.Location = new System.Drawing.Point(361, 165);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(95, 13);
             this.label4.TabIndex = 10;
@@ -141,7 +145,7 @@
             // 
             // textBoxRound
             // 
-            this.textBoxRound.Location = new System.Drawing.Point(474, 133);
+            this.textBoxRound.Location = new System.Drawing.Point(471, 181);
             this.textBoxRound.Name = "textBoxRound";
             this.textBoxRound.Size = new System.Drawing.Size(100, 20);
             this.textBoxRound.TabIndex = 11;
@@ -149,7 +153,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(471, 117);
+            this.label5.Location = new System.Drawing.Point(468, 165);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(39, 13);
             this.label5.TabIndex = 12;
@@ -157,7 +161,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(364, 175);
+            this.button1.Location = new System.Drawing.Point(361, 220);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(210, 23);
             this.button1.TabIndex = 13;
@@ -170,16 +174,52 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(13, 413);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(169, 39);
+            this.label6.Size = new System.Drawing.Size(169, 52);
             this.label6.TabIndex = 14;
-            this.label6.Text = "App made by : Justin \"Jeo\" Jones \r\n2019 V 1.0\r\n\r\n";
+            this.label6.Text = "App made by : Justin \"Jeo\" Jones \r\n2019 V 1.1\r\n\r\n\r\n";
             this.label6.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // textBoxScore1
+            // 
+            this.textBoxScore1.Location = new System.Drawing.Point(364, 137);
+            this.textBoxScore1.Name = "textBoxScore1";
+            this.textBoxScore1.Size = new System.Drawing.Size(100, 20);
+            this.textBoxScore1.TabIndex = 15;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(364, 121);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(76, 13);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "Player 1 Score";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(471, 121);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(76, 13);
+            this.label8.TabIndex = 17;
+            this.label8.Text = "Player 2 Score";
+            // 
+            // textBoxScore2
+            // 
+            this.textBoxScore2.Location = new System.Drawing.Point(471, 138);
+            this.textBoxScore2.Name = "textBoxScore2";
+            this.textBoxScore2.Size = new System.Drawing.Size(100, 20);
+            this.textBoxScore2.TabIndex = 18;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(594, 445);
+            this.Controls.Add(this.textBoxScore2);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.textBoxScore1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label5);
@@ -221,6 +261,10 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Timer timerUpdate;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBoxScore1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox textBoxScore2;
     }
 }
 
