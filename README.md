@@ -1,4 +1,4 @@
-<h1>Melee-Stream-Puller</h1>
+<h1>Melee-Stream-Puller V1.1</h1>
 <h2>This app makes running streams easier by pulling down the matches automatically. You can hook it up with obs to allow the stream to update as you select new matches.</h2>
 <h2>How to download: </h2>
 <ul>
@@ -29,4 +29,19 @@
   <li>New boxes should show up, look for text file and click the browse button</li>
   <li>Look for the assests folder and then find the matching file</li>
   <li>Click ok it should be added</li>
+</ul>
+<h2>If you have your own xml file</h2>
+<ul>
+  <li>Go into the assests file</li>
+  <li>Go into the xml folder</li>
+  <li>Replace the streamcontrol.xml file with yours. Make sure it has the same name</li>
+  <li>Required nodes</li>
+  <ul>
+    <li>/items/pName1</li>
+    <li>/items/pName2</li>
+    <li>/items/gTitle  (tournament name)</li>
+    <li>/items/gTitle2  (round name)</li>
+    <li>/items/pScore1</li>
+    <li>/items/pScore2</li>
+  </ul>
 </ul>
