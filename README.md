@@ -44,4 +44,5 @@
     <li>/items/pScore1</li>
     <li>/items/pScore2</li>
   </ul>
+  <li>Update anything else that uses this xml file to work on the new path (will be changed in the future to work anywhere)</li>
 </ul>
