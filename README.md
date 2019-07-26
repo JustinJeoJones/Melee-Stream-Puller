@@ -32,9 +32,6 @@
 </ul>
 <h2>If you have your own xml file</h2>
 <ul>
-  <li>Go into the assests file</li>
-  <li>Go into the xml folder</li>
-  <li>Replace the streamcontrol.xml file with yours. Make sure it has the same name</li>
   <li>Required nodes</li>
   <ul>
     <li>/items/pName1</li>
@@ -44,5 +41,9 @@
     <li>/items/pScore1</li>
     <li>/items/pScore2</li>
   </ul>
-  <li>Update anything else that uses this xml file to work on the new path (will be changed in the future to work anywhere)</li>
+  <li>Launch the app</li>
+  <li>Click xml file search</li>
+  <li>Find your file</li>
+  <li>Add it. If there is no issues it works.</li>
+  <li>Once it is set up once you shouldn't need to do it again</li>
 </ul>
