@@ -11,6 +11,7 @@ namespace MeleeStreamInfo
     public partial class Form1 : Form
     {
         private string url;
+        private string xmlFile = "assests/xml/streamcontrol.xml";
         public Form1()
         {
             InitializeComponent();
@@ -185,7 +186,7 @@ namespace MeleeStreamInfo
             writeFile("assests/p2Score.txt", textBoxScore2.Text);
             //xml file updates
             XmlDocument doc = new XmlDocument();
-            doc.Load("assests/xml/streamcontrol.xml");
+            doc.Load(xmlFile);
             XmlNode node = doc.DocumentElement.SelectSingleNode("/items/pName1");
             node.InnerText = textBoxP1.Text;
             node = doc.DocumentElement.SelectSingleNode("/items/pName2");
@@ -199,7 +200,7 @@ namespace MeleeStreamInfo
             node = doc.DocumentElement.SelectSingleNode("/items/pScore2");
             node.InnerText = textBoxScore2.Text;
 
-            doc.Save("assests/xml/streamcontrol.xml");
+            doc.Save(xmlFile);
             labelError.Text = "Files updated!";
         }
         private void writeFile(string name, string info)
@@ -225,6 +226,23 @@ namespace MeleeStreamInfo
         private void label6_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonXML_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.Filter= "XML Files|*.xml";
+            openFileDialog1.DefaultExt = "xml";
+            DialogResult result = openFileDialog1.ShowDialog();
+
+            if(result == DialogResult.OK)
+            {
+                xmlFile=openFileDialog1.FileName;
+                labelError.Text = "XML File loaded.";
+            }
+            else
+            {
+                labelError.Text = "Could not load the file";
+            }
         }
     }
 }

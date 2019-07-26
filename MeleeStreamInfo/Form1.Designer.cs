@@ -49,6 +49,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.textBoxScore2 = new System.Windows.Forms.TextBox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.buttonXML = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBoxURL
@@ -211,11 +213,26 @@
             this.textBoxScore2.Size = new System.Drawing.Size(100, 20);
             this.textBoxScore2.TabIndex = 18;
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // buttonXML
+            // 
+            this.buttonXML.Location = new System.Drawing.Point(361, 249);
+            this.buttonXML.Name = "buttonXML";
+            this.buttonXML.Size = new System.Drawing.Size(210, 23);
+            this.buttonXML.TabIndex = 19;
+            this.buttonXML.Text = "XML Search";
+            this.buttonXML.UseVisualStyleBackColor = true;
+            this.buttonXML.Click += new System.EventHandler(this.buttonXML_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(594, 445);
+            this.Controls.Add(this.buttonXML);
             this.Controls.Add(this.textBoxScore2);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -265,6 +282,8 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBoxScore2;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Button buttonXML;
     }
 }
 
