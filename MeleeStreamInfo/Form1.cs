@@ -11,7 +11,8 @@ namespace MeleeStreamInfo
     public partial class Form1 : Form
     {
         private string url;
-        private string xmlFile = "assests/xml/streamcontrol.xml";
+
+        private string xmlFile;
         public Form1()
         {
             InitializeComponent();
@@ -19,7 +20,7 @@ namespace MeleeStreamInfo
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            xmlFile = readXML();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -227,7 +228,14 @@ namespace MeleeStreamInfo
         {
 
         }
-
+        private string readXML()
+        {
+            StreamReader sr = new StreamReader("assests/xml/xmlFileLocation.txt");
+            string result = sr.ReadLine();
+            sr.Close();
+            return result;
+            
+        }
         private void buttonXML_Click(object sender, EventArgs e)
         {
             openFileDialog1.Filter= "XML Files|*.xml";
@@ -236,8 +244,9 @@ namespace MeleeStreamInfo
 
             if(result == DialogResult.OK)
             {
-                xmlFile=openFileDialog1.FileName;
-                labelError.Text = "XML File loaded.";
+                xmlFile=openFileDialog1.FileName.Trim();
+                writeFile("assests/xml/xmlFileLocation.txt", xmlFile);
+                labelError.Text = xmlFile;
             }
             else
             {
