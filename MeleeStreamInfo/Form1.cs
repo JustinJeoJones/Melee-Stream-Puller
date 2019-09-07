@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json.Linq;
 using System;
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -21,8 +22,17 @@ namespace MeleeStreamInfo
         private void Form1_Load(object sender, EventArgs e)
         {
             xmlFile = readXML();
+            addCharas();
         }
-
+        private void addCharas()
+        {
+            string[] charas = Melee.getCharacters();
+            for(int i = 0; i < charas.Count(); i++)
+            {
+                comboBoxP1.Items.Add(charas[i]);
+                comboBoxP2.Items.Add(charas[i]);
+            }
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             labelError.Text = "Clicked!";
@@ -45,6 +55,10 @@ namespace MeleeStreamInfo
                     smashGG();
                 }
             }
+            if(listBoxResults.Items.Count == 0)
+            {
+                labelError.Text = "Make sure that the link is correct. If Smash.gg make sure its the right bracket.";
+            }
         }
 
         private void smashGG() //Data is intense, this runs slow
@@ -58,7 +72,7 @@ namespace MeleeStreamInfo
             foreach (JObject set in Data["sets"]) //goes through all pulled matches
             {
                 Match match = new Match();
-                if ((string)set["completedAt"] == null) //continues if not completed
+                if ((string)set["completedAt"] == null && ((string)set["unreachable"] =="false")) //continues if not completed and if actually bracket
                 {
                     //have to pull id's to check against all registered players. Need to figure out how to make this more efficent 
                     match.player1 = (string)set["entrant1Id"]; 
@@ -117,8 +131,15 @@ namespace MeleeStreamInfo
                     foreach (JObject x in bracket[matchid])
                     {
                         Match match = new Match();
-                        match.player1 = ((string)x["player1"]["display_name"]);
-                        match.player2 = ((string)x["player2"]["display_name"]);
+                        try
+                        {
+                            match.player1 = ((string)x["player1"]["display_name"]);
+                            match.player2 = ((string)x["player2"]["display_name"]);
+                        }
+                        catch
+                        {
+                            continue;
+                        }
                         //winners is positive, losers is negative
                         if (i < 0)
                         {
@@ -129,7 +150,7 @@ namespace MeleeStreamInfo
                             match.round = "Winners Round " + i;
                         }
                         string complete = ((string)x["state"]);
-                        if (complete !="complete"&& complete != "pending") //only accepts matches that haven't started. should move this to save time on match making
+                        if (complete !="complete") //only accepts matches that haven't started. should move this to save time on match making
                         {
                             listBoxResults.Items.Add(match);
                         }
@@ -144,7 +165,7 @@ namespace MeleeStreamInfo
                 }
                 catch //once it detects that the newest round doesn't exist, there are no more rounds left to pull
                 {
-                    labelError.Text = "All matches pulled";
+                    labelError.Text = "All matches pulled. Current matches: "+ listBoxResults.Items.Count;
                     break;
                 }
             }
@@ -185,6 +206,26 @@ namespace MeleeStreamInfo
             writeFile("assests/gTitle2.txt", textBoxRound.Text);
             writeFile("assests/p1Score.txt", textBoxScore1.Text);
             writeFile("assests/p2Score.txt", textBoxScore2.Text);
+            writeFile("assests/Comm1.txt", textBoxCommentator.Text);
+            writeFile("assests/Comm2.txt", textBoxCommentator2.Text);
+            if (comboBoxP1.Text != null)
+            {
+                try
+                {
+                    Image I = Image.FromFile("assests/icons/" + Melee.findMatch(comboBoxP1.Text));
+                    I.Save("assests/p1.png");
+                }
+                catch { }
+            }
+            if (comboBoxP2.Text != null)
+            {
+                try
+                {
+                    Image I = Image.FromFile("assests/icons/" + Melee.findMatch(comboBoxP2.Text));
+                    I.Save("assests/p2.png");
+                }
+                catch { }
+            }
             //xml file updates
             XmlDocument doc = new XmlDocument();
             doc.Load(xmlFile);
@@ -200,6 +241,10 @@ namespace MeleeStreamInfo
             node.InnerText = textBoxScore1.Text;
             node = doc.DocumentElement.SelectSingleNode("/items/pScore2");
             node.InnerText = textBoxScore2.Text;
+            node = doc.DocumentElement.SelectSingleNode("/items/Comm1");
+            node.InnerText = textBoxCommentator.Text;
+            node = doc.DocumentElement.SelectSingleNode("/items/Comm2");
+            node.InnerText = textBoxCommentator2.Text;
 
             doc.Save(xmlFile);
             labelError.Text = "Files updated!";
@@ -215,13 +260,20 @@ namespace MeleeStreamInfo
         private void listBoxResults_SelectedIndexChanged(object sender, EventArgs e)
         {
             //pulls match info from selected
-            Match match = (Match)listBoxResults.SelectedItem;
-            textBoxP1.Text = match.player1;
-            textBoxP2.Text = match.player2;
-            textBoxRound.Text = match.round;
-            //resets score counter
-            textBoxScore1.Text = "0";
-            textBoxScore2.Text = "0";
+            try
+            {
+                Match match = (Match)listBoxResults.SelectedItem;
+                textBoxP1.Text = match.player1;
+                textBoxP2.Text = match.player2;
+                textBoxRound.Text = match.round;
+                //resets score counter
+                textBoxScore1.Text = "0";
+                textBoxScore2.Text = "0";
+            }
+            catch
+            {
+                
+            }
         }
 
         private void label6_Click(object sender, EventArgs e)
@@ -252,6 +304,16 @@ namespace MeleeStreamInfo
             {
                 labelError.Text = "Could not load the file";
             }
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxP1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
