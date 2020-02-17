@@ -59,6 +59,9 @@
             this.label12 = new System.Windows.Forms.Label();
             this.comboBoxP1 = new System.Windows.Forms.ComboBox();
             this.comboBoxP2 = new System.Windows.Forms.ComboBox();
+            this.buttonSwitch = new System.Windows.Forms.Button();
+            this.buttonSwitchScore = new System.Windows.Forms.Button();
+            this.buttonSwitchChara = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBoxURL
@@ -107,7 +110,7 @@
             // 
             // textBoxP1
             // 
-            this.textBoxP1.Location = new System.Drawing.Point(364, 94);
+            this.textBoxP1.Location = new System.Drawing.Point(307, 94);
             this.textBoxP1.Name = "textBoxP1";
             this.textBoxP1.Size = new System.Drawing.Size(100, 20);
             this.textBoxP1.TabIndex = 5;
@@ -115,7 +118,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(364, 74);
+            this.label2.Location = new System.Drawing.Point(307, 74);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(45, 13);
             this.label2.TabIndex = 60;
@@ -123,7 +126,7 @@
             // 
             // textBoxP2
             // 
-            this.textBoxP2.Location = new System.Drawing.Point(471, 94);
+            this.textBoxP2.Location = new System.Drawing.Point(482, 94);
             this.textBoxP2.Name = "textBoxP2";
             this.textBoxP2.Size = new System.Drawing.Size(100, 20);
             this.textBoxP2.TabIndex = 7;
@@ -131,7 +134,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(471, 73);
+            this.label3.Location = new System.Drawing.Point(482, 73);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(45, 13);
             this.label3.TabIndex = 80;
@@ -139,7 +142,7 @@
             // 
             // textBoxName
             // 
-            this.textBoxName.Location = new System.Drawing.Point(364, 225);
+            this.textBoxName.Location = new System.Drawing.Point(307, 225);
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(100, 20);
             this.textBoxName.TabIndex = 10;
@@ -147,7 +150,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(361, 209);
+            this.label4.Location = new System.Drawing.Point(304, 209);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(95, 13);
             this.label4.TabIndex = 100;
@@ -155,7 +158,7 @@
             // 
             // textBoxRound
             // 
-            this.textBoxRound.Location = new System.Drawing.Point(471, 225);
+            this.textBoxRound.Location = new System.Drawing.Point(482, 225);
             this.textBoxRound.Name = "textBoxRound";
             this.textBoxRound.Size = new System.Drawing.Size(100, 20);
             this.textBoxRound.TabIndex = 11;
@@ -163,7 +166,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(471, 209);
+            this.label5.Location = new System.Drawing.Point(482, 209);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(39, 13);
             this.label5.TabIndex = 120;
@@ -191,7 +194,7 @@
             // 
             // textBoxScore1
             // 
-            this.textBoxScore1.Location = new System.Drawing.Point(364, 137);
+            this.textBoxScore1.Location = new System.Drawing.Point(307, 137);
             this.textBoxScore1.Name = "textBoxScore1";
             this.textBoxScore1.Size = new System.Drawing.Size(100, 20);
             this.textBoxScore1.TabIndex = 8;
@@ -199,7 +202,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(364, 121);
+            this.label7.Location = new System.Drawing.Point(307, 121);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(76, 13);
             this.label7.TabIndex = 160;
@@ -208,7 +211,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(471, 121);
+            this.label8.Location = new System.Drawing.Point(482, 121);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(76, 13);
             this.label8.TabIndex = 170;
@@ -216,7 +219,7 @@
             // 
             // textBoxScore2
             // 
-            this.textBoxScore2.Location = new System.Drawing.Point(471, 138);
+            this.textBoxScore2.Location = new System.Drawing.Point(482, 138);
             this.textBoxScore2.Name = "textBoxScore2";
             this.textBoxScore2.Size = new System.Drawing.Size(100, 20);
             this.textBoxScore2.TabIndex = 9;
@@ -238,7 +241,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(364, 252);
+            this.label9.Location = new System.Drawing.Point(307, 252);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(78, 13);
             this.label9.TabIndex = 200;
@@ -247,14 +250,14 @@
             // 
             // textBoxCommentator
             // 
-            this.textBoxCommentator.Location = new System.Drawing.Point(364, 268);
+            this.textBoxCommentator.Location = new System.Drawing.Point(307, 268);
             this.textBoxCommentator.Name = "textBoxCommentator";
             this.textBoxCommentator.Size = new System.Drawing.Size(100, 20);
             this.textBoxCommentator.TabIndex = 12;
             // 
             // textBoxCommentator2
             // 
-            this.textBoxCommentator2.Location = new System.Drawing.Point(471, 268);
+            this.textBoxCommentator2.Location = new System.Drawing.Point(482, 268);
             this.textBoxCommentator2.Name = "textBoxCommentator2";
             this.textBoxCommentator2.Size = new System.Drawing.Size(100, 20);
             this.textBoxCommentator2.TabIndex = 13;
@@ -262,7 +265,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(471, 252);
+            this.label10.Location = new System.Drawing.Point(482, 252);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(78, 13);
             this.label10.TabIndex = 230;
@@ -271,7 +274,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(367, 164);
+            this.label11.Location = new System.Drawing.Point(310, 164);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(94, 13);
             this.label11.TabIndex = 231;
@@ -280,7 +283,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(471, 164);
+            this.label12.Location = new System.Drawing.Point(482, 164);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(94, 13);
             this.label12.TabIndex = 232;
@@ -289,7 +292,7 @@
             // comboBoxP1
             // 
             this.comboBoxP1.FormattingEnabled = true;
-            this.comboBoxP1.Location = new System.Drawing.Point(364, 180);
+            this.comboBoxP1.Location = new System.Drawing.Point(307, 180);
             this.comboBoxP1.Name = "comboBoxP1";
             this.comboBoxP1.Size = new System.Drawing.Size(100, 21);
             this.comboBoxP1.TabIndex = 233;
@@ -298,16 +301,49 @@
             // comboBoxP2
             // 
             this.comboBoxP2.FormattingEnabled = true;
-            this.comboBoxP2.Location = new System.Drawing.Point(471, 180);
+            this.comboBoxP2.Location = new System.Drawing.Point(482, 180);
             this.comboBoxP2.Name = "comboBoxP2";
             this.comboBoxP2.Size = new System.Drawing.Size(100, 21);
             this.comboBoxP2.TabIndex = 234;
+            // 
+            // buttonSwitch
+            // 
+            this.buttonSwitch.Location = new System.Drawing.Point(413, 92);
+            this.buttonSwitch.Name = "buttonSwitch";
+            this.buttonSwitch.Size = new System.Drawing.Size(63, 23);
+            this.buttonSwitch.TabIndex = 235;
+            this.buttonSwitch.Text = "Switch";
+            this.buttonSwitch.UseVisualStyleBackColor = true;
+            this.buttonSwitch.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // buttonSwitchScore
+            // 
+            this.buttonSwitchScore.Location = new System.Drawing.Point(413, 136);
+            this.buttonSwitchScore.Name = "buttonSwitchScore";
+            this.buttonSwitchScore.Size = new System.Drawing.Size(63, 23);
+            this.buttonSwitchScore.TabIndex = 236;
+            this.buttonSwitchScore.Text = "Switch";
+            this.buttonSwitchScore.UseVisualStyleBackColor = true;
+            this.buttonSwitchScore.Click += new System.EventHandler(this.buttonSwitchScore_Click);
+            // 
+            // buttonSwitchChara
+            // 
+            this.buttonSwitchChara.Location = new System.Drawing.Point(413, 178);
+            this.buttonSwitchChara.Name = "buttonSwitchChara";
+            this.buttonSwitchChara.Size = new System.Drawing.Size(63, 23);
+            this.buttonSwitchChara.TabIndex = 237;
+            this.buttonSwitchChara.Text = "Switch";
+            this.buttonSwitchChara.UseVisualStyleBackColor = true;
+            this.buttonSwitchChara.Click += new System.EventHandler(this.buttonSwitchChara_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(594, 445);
+            this.Controls.Add(this.buttonSwitchChara);
+            this.Controls.Add(this.buttonSwitchScore);
+            this.Controls.Add(this.buttonSwitch);
             this.Controls.Add(this.comboBoxP2);
             this.Controls.Add(this.comboBoxP1);
             this.Controls.Add(this.label12);
@@ -376,6 +412,9 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ComboBox comboBoxP1;
         private System.Windows.Forms.ComboBox comboBoxP2;
+        private System.Windows.Forms.Button buttonSwitch;
+        private System.Windows.Forms.Button buttonSwitchScore;
+        private System.Windows.Forms.Button buttonSwitchChara;
     }
 }
 

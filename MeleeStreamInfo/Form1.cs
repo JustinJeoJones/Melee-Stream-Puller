@@ -315,5 +315,26 @@ namespace MeleeStreamInfo
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string Switch = textBoxP1.Text;
+            textBoxP1.Text = textBoxP2.Text;
+            textBoxP2.Text = Switch;
+        }
+
+        private void buttonSwitchScore_Click(object sender, EventArgs e)
+        {
+            string Switch = textBoxScore1.Text;
+            textBoxScore1.Text = textBoxScore2.Text;
+            textBoxScore2.Text = Switch;
+        }
+
+        private void buttonSwitchChara_Click(object sender, EventArgs e)
+        {
+            string Switch = comboBoxP1.Text;
+            comboBoxP1.Text = comboBoxP2.Text;
+            comboBoxP2.Text = Switch;
+        }
     }
 }
